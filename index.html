@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Currency Converter</h2>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+
+        <label for="fromCurrency">From:</label>
+        <div class="currency-wrapper">
+            <img id="fromFlag" src="https://flagcdn.com/w40/in.png" alt="Flag">
+            <select id="fromCurrency"></select>
+        </div>
+
+        <button class="swap-btn" onclick="swapCurrencies()">🔄 Swap</button>
+
+        <label for="toCurrency">To:</label>
+        <div class="currency-wrapper">
+            <img id="toFlag" src="https://flagcdn.com/w40/us.png" alt="Flag">
+            <select id="toCurrency"></select>
+        </div>
+
+        <button class="convert-btn" onclick="convertCurrency()">Convert</button>
+
+        <p id="convertedAmount">Converted Amount:</p>
+
+        <!-- Loader -->
+        <div class="loader" id="loader"></div>
+
+        <!-- Exchange Rate Trends -->
+        <h3>Exchange Rate Trends (Last 7 Days)</h3>
+        <canvas id="exchangeChart"></canvas>
+
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
